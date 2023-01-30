@@ -1,0 +1,62 @@
+GET http://localhost:10001/users/
+Accept: application/json
+
+###
+
+POST http://localhost:10001/auth/register
+Content-Type: application/json
+
+{
+  "email": "abab@abab.ab",
+  "password": "qwerty",
+  "role": "user"
+}
+
+###
+
+POST http://localhost:10001/auth/login
+Content-Type: application/json
+
+{
+  "email": "abab@abab.ab",
+  "password": "qwerty"
+}
+
+###
+
+POST http://localhost:10001/auth/
+Content-Type: application/json
+
+{
+  "username": "abab@abab.ab",
+  "password": "qwerty"
+}
+
+###
+
+GET http://localhost:10001/users/6
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwiZW1haWwiOiJhYmFiQGFiYWIuYWIiLCJyb2xlIjoidXNlciIsImV4cCI6MTY2MTk1Mzk2N30.qP7T4j8O8zL4CnW9_sd5xF9uHG-BNAmsI3e-4VLZH4I
+
+###
+
+PUT http://localhost:10001/auth/
+Content-Type: application/json
+
+{
+  "refresh_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Ilpsb2pEZWQiLCJyb2xlIjoiYWRtaW4iLCJleHAiOjE2NzIyMzUxODV9.WCAjkqF8ZUilB6v_0wDRKs2mYeBEUzHBmlmXESPL7Jw"
+}
+
+###
+
+POST http://localhost:10001/favorites/movies/20
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwiZW1haWwiOiJhYmFiQGFiYWIuYWIiLCJyb2xlIjoidXNlciIsImV4cCI6MTY2MTk1Mzk2N30.qP7T4j8O8zL4CnW9_sd5xF9uHG-BNAmsI3e-4VLZH4I
+
+###
+
+###
+
+DELETE http://localhost:10001/favorites/movies/4
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwiZW1haWwiOiJhYmFiQGFiYWIuYWIiLCJyb2xlIjoidXNlciIsImV4cCI6MTY2MTk1Mzk2N30.qP7T4j8O8zL4CnW9_sd5xF9uHG-BNAmsI3e-4VLZH4I
